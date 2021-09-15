@@ -6,7 +6,7 @@ public class Main {
 
         Fork[] forks = new Fork[10];
         for (int i = 0; i < 10; i++) {
-            forks[i] = new Fork("Fork " + i+i);
+            forks[i] = new Fork("Fork " + i);
         }
 
         Philosopher[] philosopher = new Philosopher[10];
@@ -18,5 +18,13 @@ public class Main {
         for (Philosopher person : philosopher) {
             person.start();
         }
+
+//        for (Fork fork : forks) {
+//            System.out.println(fork.getName());
+//        }
+//
+//        for (Philosopher person : philosopher) {
+//            System.out.println(person.getName());
+//        }
     }
 }
