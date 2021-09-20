@@ -2,7 +2,7 @@ package cz.marianjanik.ekurz;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         Fork[] forks = new Fork[10];
         for (int i = 0; i < 10; i++) {
@@ -19,12 +19,16 @@ public class Main {
             person.start();
         }
 
-//        for (Fork fork : forks) {
-//            System.out.println(fork.getName());
-//        }
-//
-//        for (Philosopher person : philosopher) {
-//            System.out.println(person.getName());
-//        }
+        for (Philosopher person : philosopher) {
+            person.join();
+        }
+
+        for (Fork fork : forks) {
+            System.out.println(fork.getName());
+        }
+
+        for (Philosopher person : philosopher) {
+            System.out.println(person.getName());
+        }
     }
 }

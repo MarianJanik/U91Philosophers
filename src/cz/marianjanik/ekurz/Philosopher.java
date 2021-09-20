@@ -7,7 +7,7 @@ public class Philosopher extends Thread {
     private Fork forkInLeftHand;
     private Fork forkInRightHand;
 
-    private final int NUMBER_OF_SERVINGS = 100;
+    private final int NUMBER_OF_SERVINGS = 10000;
 
     public Philosopher(String name, Fork forkInLeftHand, Fork forkInRightHand) {
         this.name = name;
